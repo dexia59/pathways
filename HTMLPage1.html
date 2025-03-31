@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <script src="https://kit.fontawesome.com/68392d9a97.js" crossorigin="anonymous"></script>
+    <script src="Script1.js"></script>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <!-- You Section -->
+        <div class="You">
+            <h1><i class="fa-solid fa-person"></i> You</h1>
+            <p><i class="fa-solid fa-bolt"></i> Energy</p>
+            <p class="energy-display" id="energy-display">0 / 10</p>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <p id="money-display"><i class="fa-solid fa-dollar-sign"></i> 0</p>
+
+        </div>
+
+        <!-- Tabs Section -->
+        <div class="tabs">
+            <!-- Tab Buttons -->
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="showTab('Home')"><i class="fa-solid fa-house"></i> Home</button>
+                <button class="tab-button" onclick="showTab('BlanetBitness')"><i class="fa-solid fa-dumbbell"></i> Blanet Bitness</button>
+                <button class="tab-button" onclick="showTab('Career')"><i class="fa-solid fa-briefcase"></i> Career</button>
+                <button class="tab-button" onclick="showTab('Education')"><i class="fa-solid fa-graduation-cap"></i> Education</button>
+                <button class="tab-button" onclick="showTab('BellsBargo')"><i class="fa-solid fa-piggy-bank"></i> Bells Bargo</button>
+                <button class="tab-button" onclick="showTab('Billow')"><i class="fa-solid fa-sign-hanging"></i> Billow</button>
+                <button class="tab-button" onclick="showTab('Ibea')"><i class="fa-solid fa-cart-flatbed"></i> Ibea</button>
+                <button class="tab-button" onclick="showTab('BarneBobles')"><i class="fa-solid fa-book"></i> Barne & Bobles</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="Home" class="tab-content active">
+                <button id="sleep-button" onclick="toggleSleep()">Start Sleeping</button>
+            </div>
+            <div id="BlanetBitness" class="tab-content">
+                <button id="gym-button" onclick="purchaseGymMembership()">Buy Membership (25 Money)</button>
+                <br />
+                <button id="cardio-button" disabled>Start Cardio</button>
+            </div>
+            <div id="Career" class="tab-content">
+                <button id="cashier-button" onclick="toggleCashier()">Cashier</button>
+                <div class="category" onclick="toggleContent(this)">
+                    <h3>Entry Level</h3>
+                    <div class="category" onclick="toggleContent(this)">
+                        <div class="category-header">
+                            <h3>Entry Level</h3>
+                            <i class="fa-solid fa-caret-down toggle-icon"></i>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>Cashier (Entry Level)</li>
+                                <li>Sales Associate (Intermediate)</li>
+                                <li>Store Manager (Advanced)</li>
+                                <li>Regional Retail Director (Expert)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Education" class="tab-content">
+                <p>Education tab content is here. Showcase achievements!</p>
+            </div>
+            <div id="BellsBargo" class="tab-content">
+                <p>Bells Bargo tab: Add your custom content or data here.</p>
+            </div>
+            <div id="Billow" class="tab-content">
+                <p>Billow tab: Let your creativity shine in this space.</p>
+            </div>
+            <div id="Ibea" class="tab-content">
+                <p>Ibea tab is ready for your ideas and information.</p>
+            </div>
+            <div id="BarneBobles" class="tab-content">
+                <p>Barne & Bobles tab: Put your unique content here.</p>
+            </div>
+        </div>
+
+        <div class="log-section">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <h1>Message Log</h1>
+                <button id="clear-log-button" onclick="clearLog()">Clear Log</button>
+            </div>
+            <ul id="log-list"></ul> <!-- Log messages will appear here -->
+        </div>
+
+        <div class="column-buttons">
+            <button id="save-log-button" onclick="saveAllData()">Save</button>
+            <button id="clear-saved-data-button" onclick="clearAllData()">Reset</button>
+        </div>
+
+
+    </div>
+</body>
+</html>
